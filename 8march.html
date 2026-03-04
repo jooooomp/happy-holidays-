@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Для самой лучшей мамы ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #fff);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255,255,255,0.7);
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    nav button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #ff7aa2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #ff5c8a;
+      transform: scale(1.05);
+    }
+    section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Мамочка, с 8 Марта! 🌸</h1>
+  <p>Этот сайт — про нашу семью и самые тёплые моменты</p>
+</header>
+
+<nav>
+  <button onclick="showSection('main')">Главная</button>
+  <button onclick="showSection('parents')">Мама и папа</button>
+  <button onclick="showSection('me')">Мама и я</button>
+  <button onclick="showSection('sister')">Мама и сестра</button>
+</nav>
+
+<section id="main" class="active">
+  <h2>Любимая мама 💖</h2>
+  <p>Спасибо тебе за заботу, любовь и поддержку. Мы тебя очень любим!</p>
+  <div class="gallery">
+    <img src="image/vse.jpg" alt="">
+    <img src="image/vse1.jpg" alt="">
+    <img src="image/vse2.jpg" alt="">
+  </div>
+</section>
+
+<section id="parents">
+  <h2>Мама и папа 💑</h2>
+  <div class="gallery">
+    <img src="image/papa.jpg" alt="">
+    <img src="image/papa1.jpg" alt="">
+    <img src="image/papa2.jpg" alt="">
+  </div>
+</section>
+
+<section id="me">
+  <h2>Мама и я 😊</h2>
+  <div class="gallery">
+    <img src="image/ya.jpg" alt="">
+    <img src="image/ya1.jpg" alt="">
+    <img src="image/ya2.jpg" alt="">
+  </div>
+</section>
+
+<section id="sister">
+  <h2>Мама и сестра 🌷</h2>
+  <div class="gallery">
+    <img src="image/alina.jpg" alt="">
+    <img src="image/alina1.jpg" alt="">
+    <img src="image/alina2.jpg" alt="">
+  </div>
+</section>
+
+<footer>
+  Сделано с любовью ❤️
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(sec => {
+      sec.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
